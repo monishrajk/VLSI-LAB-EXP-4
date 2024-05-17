@@ -1,32 +1,26 @@
-# VLSI-LAB-EXP-4
-SIMULATION AND IMPLEMENTATION OF SEQUENTIAL LOGIC CIRCUITS
 
-## AIM: 
- To simulate and synthesis SR, JK, T, D - FLIPFLOP, COUNTER DESIGN using Xilinx ISE.
+### SIMULATION AND IMPLEMENTATION OF SEQUENTIAL LOGIC CIRCUITS
 
-## APPARATUS REQUIRED:
+### AIM: 
+ To simulate and synthesis SR, JK, T, D - FLIPFLOP, COUNTER DESIGN using Vivado 2023.2.
 
-Xilinx 14.7
-Spartan6 FPGA
+### APPARATUS REQUIRED:
 
-## PROCEDURE:
-STEP:1  Start  the Xilinx navigator, Select and Name the New project.
-STEP:2  Select the device family, device, package and speed.       
-STEP:3  Select new source in the New Project and select Verilog Module as the Source type.                       
-STEP:4  Type the File Name and Click Next and then finish button. Type the code and save it.
-STEP:5  Select the Behavioral Simulation in the Source Window and click the check syntax.                       
-STEP:6  Click the simulation to simulate the program and  give the inputs and verify the outputs as per the truth table.               
-STEP:7  Select the Implementation in the Sources Window and select the required file in the Processes Window.
-STEP:8  Select Check Syntax from the Synthesize  XST Process. Double Click in the  FloorplanArea/IO/Logic-Post Synthesis process in the User Constraints process group. UCF(User constraint File) is obtained. 
-STEP:9  In the Design Object List Window, enter the pin location for each pin in the Loc column Select save from the File menu.
-STEP:10 Double click on the Implement Design and double click on the Generate Programming File to create a bitstream of the design.(.v) file is converted into .bit file here.
-STEP:11  On the board, by giving required input, the LEDs starts to glow light, indicating the output.
+VIVADO 2023.2
+
+### PROCEDURE:
+STEP:1 Start the Vivado, Select and Name the New project.<br>
+STEP:2 Select the device family, device, package and speed. <br>
+STEP:3 Select new source in the New Project and select Verilog Module as the Source type.<br>
+STEP:4 Type the File Name and Click Next and then finish button. Type the code and save it.<br>
+STEP:5 Select the Behavioural Simulation in the Source Window and click the check syntax.<br>
+STEP:6 Click the simulation to simulate the program and give the inputs and verify the outputs as per the truth table.<br>
 
 
-## SR FLIPFLOP
-### Logic Diagram:
+### SR FLIPFLOP
+### LOGIC DIAGRAM:
 ![image](https://github.com/Nandhak23/VLSI-LAB-EXP-4-/assets/160568515/1b2177a8-188e-4f48-b15a-d7c9b8593b3b)
-### Verilog Code:
+### VERILOG CODE:
 ```
 module srff(s,r,clk,rst,q);
 input s,r,clk,rst;
@@ -47,13 +41,13 @@ end
 end
 endmodule
 ```
-### Output:
+### OUTPUT:
 ![image](https://github.com/Nandhak23/VLSI-LAB-EXP-4-/assets/160568515/fde5adbc-d127-43c7-9c3a-c97e33c69621)
 
-## JK FLIPFLOP
-### Logic Diagram:
+### JK FLIPFLOP
+### LOGIC DIAGRAM:
 ![image](https://github.com/Nandhak23/VLSI-LAB-EXP-4-/assets/160568515/fe2a5529-43ac-4082-8cac-c76d3b0e7b7c)
-### Verilog Code:
+### VERILOG CODE:
 ```
 module jkff(j,k,clk,rst,q);
 input j,k,clk,rst;
@@ -74,14 +68,14 @@ end
 end
 endmodule
 ```
-### Output:
+### OUTPUT:
 ![image](https://github.com/Nandhak23/VLSI-LAB-EXP-4-/assets/160568515/b12acba8-0471-448a-8dc6-4bc19cde4bc3)
 
-## T FLIPFLOP
-### Logic Diagram:
+### T FLIPFLOP
+### LOGIC DIAGRAM:
 ![image](https://github.com/Nandhak23/VLSI-LAB-EXP-4-/assets/160568515/697518d6-da49-48c9-85b5-91688460a237)
 
-### Verilog Code:
+### VERILOG CODE:
 ```
 module tff(clk,rst,t,q);
 input clk,rst,t;
@@ -97,14 +91,14 @@ q=~q;
 end
 endmodule
 ```
-### Output:
+### OUTPUT:
 ![image](https://github.com/Nandhak23/VLSI-LAB-EXP-4-/assets/160568515/1d84bc96-d7b9-44bf-9f1b-b1793188a121)
 
-## D FLIPFLOP
-### Logic Diagram:
+### D FLIPFLOP
+### LOGIC DIAGRAM:
 ![image](https://github.com/Nandhak23/VLSI-LAB-EXP-4-/assets/160568515/d09dddf0-3f9f-4e6d-9f69-3787c39000d2)
 
-### Verilog Code:
+### VERILOG CODE:
 ```
 module dff(d,clk,rst,q);
 input d,clk,rst;
@@ -118,17 +112,17 @@ q=d;
 end
 endmodule
 ```
-### Output:
+### OUTPUT:
 ![image](https://github.com/Nandhak23/VLSI-LAB-EXP-4-/assets/160568515/0daf167d-d841-4311-8c4a-278de39d27c4)
 
-## COUNTER
-### Logic Diagram:
+### COUNTER
+### LOGIC DIAGRAM:
 ![image](https://github.com/Nandhak23/VLSI-LAB-EXP-4-/assets/160568515/15be6215-2b4d-48e6-8f2e-d6932e27e3b0)
-## Updown Counter:
-### Logic Diagram:
+### UPDOWN COUNTER:
+### LOGIC DIAGRAM:
 ![image](https://github.com/Nandhak23/VLSI-LAB-EXP-4-/assets/160568515/19856d87-24ca-4363-84aa-12799c6fecc6)
 
-### Verilog Code:
+### VERILOG CODE:
 ```
 module udc(clk,rst,updown,out);
 input clk,rst,updown;
@@ -147,8 +141,8 @@ endmodule
 ### Output:
   ![image](https://github.com/Nandhak23/VLSI-LAB-EXP-4-/assets/160568515/fd74457f-1f35-4e94-a628-5efff9ba956f)
 
-## Mod-10 Counter:
-### Logic Diagram:
+### Mod-10 Counter:
+### LOGIC DIAGRAM:
 ![image](https://github.com/Nandhak23/VLSI-LAB-EXP-4-/assets/160568515/637add02-e848-4f74-a8b8-9e183a68df4b)
 ### Verilog Code:
 ```
@@ -164,14 +158,14 @@ out=out+1;
 end
 endmodule
 ```
-### Output:
+### OUTPUT:
 ![image](https://github.com/Nandhak23/VLSI-LAB-EXP-4-/assets/160568515/20fb126a-6ff9-48a3-876f-64c9b710f28c)
 
-## Ripple Carry Counter:
-### Logic Diagram:
+### RIPPLE CARRY COUNTER:
+### LOGIC DIAGRAM:
 ![image](https://github.com/Nandhak23/VLSI-LAB-EXP-4-/assets/160568515/c8966ae1-c506-4bfc-a6e3-028ea15d87a2)
 
-### Verilog Code:
+### VERILOG CODE:
 ```
 module tff(q,clk,rst);
 input clk,rst;
@@ -203,15 +197,10 @@ tff tf3(q[2],q[1],rst);
 tff tf4(q[3],q[2],rst);
 endmodule
 ```
-### Output:
+### OUTPUT:
 ![image](https://github.com/Nandhak23/VLSI-LAB-EXP-4-/assets/160568515/9738870c-f3e1-40a5-87be-5a6cb680ca91)
 
-## RESULT:
-Hence SR, JK, T, D - FLIPFLOP, COUNTER DESIGN are simulated and synthesised using Xilinx ISE.
-
-
-
-
-
+### RESULT:
+Hence SR, JK, T, D - FLIPFLOP, COUNTER DESIGN are simulated and synthesised using Vivado 2023.2.
 
 
